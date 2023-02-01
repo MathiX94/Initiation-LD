@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: color
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5561863356679699637, guid: 99841000a97a6c749ad48b146e04502a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8739945465527821108, guid: 99841000a97a6c749ad48b146e04502a, type: 3}
       propertyPath: m_Layer
       value: 13
