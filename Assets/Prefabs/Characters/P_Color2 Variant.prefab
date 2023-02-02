@@ -85,11 +85,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739945466295884889, guid: 99841000a97a6c749ad48b146e04502a, type: 3}
       propertyPath: moveSpeed
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8739945466295884889, guid: 99841000a97a6c749ad48b146e04502a, type: 3}
       propertyPath: m_JumpForce
-      value: 3000
+      value: 2250
       objectReference: {fileID: 0}
     - target: {fileID: 8739945466295884889, guid: 99841000a97a6c749ad48b146e04502a, type: 3}
       propertyPath: m_WhatIsGround.m_Bits
