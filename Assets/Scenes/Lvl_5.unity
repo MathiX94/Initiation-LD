@@ -473,7 +473,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.40512592, g: 0.21568626, b: 0.77254903, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.34509805, b: 0.34901962, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1081,15 +1081,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560916, guid: 4802444b043c5f048a0629f0b5c30ab4, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.9607843
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560916, guid: 4802444b043c5f048a0629f0b5c30ab4, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.6627451
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560916, guid: 4802444b043c5f048a0629f0b5c30ab4, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.38431373
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560917, guid: 4802444b043c5f048a0629f0b5c30ab4, type: 3}
       propertyPath: m_Layer
@@ -1915,15 +1915,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560916, guid: 6bf5be60b2dbd6240aea43e279d0f10f, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.9607843
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560916, guid: 6bf5be60b2dbd6240aea43e279d0f10f, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.6627451
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560916, guid: 6bf5be60b2dbd6240aea43e279d0f10f, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.38431373
       objectReference: {fileID: 0}
     - target: {fileID: 6184633160000560917, guid: 6bf5be60b2dbd6240aea43e279d0f10f, type: 3}
       propertyPath: m_Layer

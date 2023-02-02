@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbb8073e2cc1fc439d10a9aefcf8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color1: {r: 1, g: 1, b: 1, a: 1}
-  color2: {r: 0, g: 0, b: 0, a: 1}
+  color1: {r: 0.38431373, g: 0.6627451, b: 0.9607843, a: 1}
+  color2: {r: 0.9607843, g: 0.64705884, b: 0.101960786, a: 1}
   groundForCharacterColor1:
     serializedVersion: 2
     m_Bits: 1344
