@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c00de5fa5f34be469573d2eba1b061c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlatform: 0
   toMove: {fileID: 6184633160000560917}
   toMoveSpeed: 2
 --- !u!1 &900202400265486164
@@ -172,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900202400265486165}
   m_Layer: 0
-  m_Name: Lever
+  m_Name: DoorSys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

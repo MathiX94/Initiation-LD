@@ -6,6 +6,7 @@ public class ButtonManager : MonoBehaviour
 {
     public GameObject toMove;
     public float toMoveSpeed;
+    public bool isConstant = false;
 
     private Vector3 originPos;
     private Vector3 originButtonScale;
@@ -22,17 +23,33 @@ public class ButtonManager : MonoBehaviour
         originButtonScale = child.transform.localScale;
     }
 
-    // Update is called once per frame
-    void Update()
+    void asConstant()
     {
         if (triggered) {
-            toMove.transform.position = Vector3.Lerp(toMove.transform.position, targetPos, Time.deltaTime * toMoveSpeed);
+            toMove.SendMessage("activatePlatform", true);
             if (child.transform.localScale.y > 0)
                 child.transform.localScale -= new Vector3(0, 0.05f, 0);
         } else {
-            toMove.transform.position = Vector3.Lerp(toMove.transform.position, originPos, Time.deltaTime * toMoveSpeed);
+            toMove.SendMessage("activatePlatform", false);
             if (child.transform.localScale.y < originButtonScale.y)
                 child.transform.localScale += new Vector3(0, 0.05f, 0);
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (isConstant)
+            asConstant();
+        else {
+            if (triggered) {
+                toMove.transform.position = Vector3.Lerp(toMove.transform.position, targetPos, Time.deltaTime * toMoveSpeed);
+                if (child.transform.localScale.y > 0)
+                    child.transform.localScale -= new Vector3(0, 0.05f, 0);
+            } else {
+                toMove.transform.position = Vector3.Lerp(toMove.transform.position, originPos, Time.deltaTime * toMoveSpeed);
+                if (child.transform.localScale.y < originButtonScale.y)
+                    child.transform.localScale += new Vector3(0, 0.05f, 0);
+            }
         }
     }
 
