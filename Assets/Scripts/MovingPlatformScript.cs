@@ -12,12 +12,14 @@ public class MovingPlatformScript : MonoBehaviour
     private List<GameObject> touchingObjects = new();
     public bool isActive = true;
 
+    private float timeOffset = 0;
+
     // Update is called once per frame
     void Update()
     {
         if (isActive) {
             Vector3 oldPosition = transform.position;
-            transform.position = Vector3.Lerp(position_1.position, position_2.position, Mathf.PingPong(Time.time * speed, 1.0f));
+            transform.position = Vector3.Lerp(position_1.position, position_2.position, Mathf.PingPong((Time.time-timeOffset) * speed, 1.0f));
 
             Vector3 displacement = transform.position - oldPosition;
 
@@ -29,6 +31,8 @@ public class MovingPlatformScript : MonoBehaviour
                 if(obj.GetComponent<CharacterController2D>())
                     obj.GetComponent<CharacterController2D>().Translate(displacement);
             }
+        } else {
+            timeOffset += Time.deltaTime;
         }
     }
 
