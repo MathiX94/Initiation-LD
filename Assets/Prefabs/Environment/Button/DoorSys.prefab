@@ -249,6 +249,7 @@ MonoBehaviour:
   toMove: {fileID: 6184633160000560917}
   toMoveSpeed: 2
   isConstant: 0
+  target: {fileID: 0}
 --- !u!1 &900202400265486164
 GameObject:
   m_ObjectHideFlags: 0
