@@ -13,13 +13,19 @@ public class MovingPlatformScript : MonoBehaviour
     public bool isActive = true;
 
     private float timeOffset = 0;
+    private float distanceTraveled;
+
+    void Start()
+    {
+        distanceTraveled = (position_1.position-position_2.position).magnitude;
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (isActive) {
             Vector3 oldPosition = transform.position;
-            transform.position = Vector3.Lerp(position_1.position, position_2.position, Mathf.PingPong((Time.time-timeOffset) * speed, 1.0f));
+            transform.position = Vector3.Lerp(position_1.position, position_2.position, Mathf.PingPong((Time.time-timeOffset) * speed / distanceTraveled, 1.0f));
 
             Vector3 displacement = transform.position - oldPosition;
 
