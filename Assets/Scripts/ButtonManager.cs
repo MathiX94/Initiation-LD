@@ -17,6 +17,7 @@ public class ButtonManager : MonoBehaviour
     private float timeOffset = 0;
     private List<GameObject> touchingObjects = new();
     private Vector3 position1;
+    private float distanceTraveled;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,13 @@ public class ButtonManager : MonoBehaviour
         child = this.transform.Find("sprite").gameObject;
         originButtonScale = child.transform.localScale;
         position1 = toMove.transform.position;
+        distanceTraveled = (position1-targetPos).magnitude;
     }
 
     void platformActivated()
     {
         Vector3 oldPosition = toMove.transform.position;
-        toMove.transform.position = Vector3.Lerp(position1, targetPos, Mathf.PingPong((Time.time-timeOffset) * toMoveSpeed, 1.0f));
+        toMove.transform.position = Vector3.Lerp(position1, targetPos, Mathf.PingPong((Time.time-timeOffset) * toMoveSpeed / distanceTraveled, 1.0f));
 
         Vector3 displacement = toMove.transform.position - oldPosition;
 
