@@ -2504,6 +2504,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 23.33
       objectReference: {fileID: 0}
+    - target: {fileID: 1911022008686575272, guid: 1594c151dfdbd184cbf5051bcde7507c, type: 3}
+      propertyPath: levelName
+      value: Lvl_3_Gauvain
+      objectReference: {fileID: 0}
     - target: {fileID: 1911022009126343616, guid: 1594c151dfdbd184cbf5051bcde7507c, type: 3}
       propertyPath: m_Name
       value: EndingLevelPrefab
