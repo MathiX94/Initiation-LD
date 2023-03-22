@@ -12,7 +12,7 @@ public class MovingPlatformScript : MonoBehaviour
     private List<GameObject> touchingObjects = new();
     public bool isActive = true;
 
-    private float timeOffset = 0;
+    [System.NonSerialized] public float timeOffset = 0;
     private float distanceTraveled;
 
     void Start()
@@ -57,4 +57,9 @@ public class MovingPlatformScript : MonoBehaviour
     {
         isActive = val;
     }
+
+    // public void resetPlatform()
+    // {
+    //     timeOffset = Time.time;
+    // }
 }

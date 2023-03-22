@@ -18,6 +18,7 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 m_Velocity = Vector3.zero;
 
 	public CheckPoint checkpoint;
+	// public GameObject platformToReset = gameObject;
 
 	[Header("Events")]
 	[Space]
@@ -27,6 +28,10 @@ public class CharacterController2D : MonoBehaviour
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
+	private void Start()
+	{
+		// platformToReset = this.gameObject;
+	}
 
 	private void Awake()
 	{
@@ -110,6 +115,8 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Die()
     {
+		// if (platformToReset)
+		// 	platformToReset.timeOffset = Time.time;
 		if(checkpoint)
         {
 			transform.position = checkpoint.transform.position;
