@@ -28,6 +28,7 @@ public class ButtonManager : MonoBehaviour
         originButtonScale = child.transform.localScale;
         position1 = toMove.transform.position;
         distanceTraveled = (position1-targetPos).magnitude;
+        timeOffset = Time.time;
     }
 
     void platformActivated()

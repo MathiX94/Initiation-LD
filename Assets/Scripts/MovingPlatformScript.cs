@@ -18,6 +18,7 @@ public class MovingPlatformScript : MonoBehaviour
     void Start()
     {
         distanceTraveled = (position_1.position-position_2.position).magnitude;
+        timeOffset = Time.time;
     }
 
     // Update is called once per frame
