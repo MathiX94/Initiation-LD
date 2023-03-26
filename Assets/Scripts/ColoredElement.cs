@@ -22,11 +22,12 @@ public class ColoredElement : MonoBehaviour
         if(renderer && WorldParameters.Instance)
             renderer.color = WorldParameters.Instance.GetColor(color);
 
+#if UNITY_EDITOR
         EditorApplication.delayCall += () =>
         {
             if (this != null)
                 gameObject.layer = WorldParameters.Instance.GetColorGroundMask(color);
         };
-        
+#endif
     }
 }
