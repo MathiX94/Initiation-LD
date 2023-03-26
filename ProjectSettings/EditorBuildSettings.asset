@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lvl_5_Mathieu.unity
     guid: 645858ca4614b5e4196043dd936d9d43
+  - enabled: 1
+    path: Assets/Scenes/EndingLevel.unity
+    guid: 37ca202c10f1ff94381d4560186b501a
   m_configObjects: {}
